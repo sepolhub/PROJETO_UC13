@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World, com hendlebars!</h1>
+
+{{#if clientes.lenght}}
+    {{#each clientes}}
+    <div>
+        <h2>{{this.clientes}}</h2>
+        <p>nome: R$ {{this.nome}}</p>
+        <p>email: {{this.email}}</p>
+        <p>senha: {{this.senha}}</p>
+        <p>endereco: {{this.endereco}}</p>
+    </div>
+    {{/each}}
+{{else}}
+    <p>Sem produtos disponíveis no momento.</p>
+{{/if}}
+</body>
+</html>
+

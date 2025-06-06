@@ -4,6 +4,8 @@ const {engine} = require ('express-handlebars');
 
 const mysql = require('mysql2');
 
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
@@ -25,7 +27,28 @@ conexao.connect(function(erro) {
 });
 
 app.get('/', (req,res)=>{;
-    res.render('teste');
+    let sql = 'select * from produtos';
+    conexao.query(sql, function (erro, produtos_qs) {
+        if (erro) {
+            console.error('Erro ao consultar produtos:', erro);
+            res.status(500).send('Erro ao consultar produtos');
+            return;
+        }
+        res.render('index', {produtos: produtos_qs});
+    })
+}
+);
+
+app.get('/clientes', (req,res)=>{;
+    let sql = 'select * from clientes';
+    conexao.query(sql, function (erro, clientes_qs) {
+        if (erro) {
+            console.error('Erro ao consultar clientes:', erro);
+            res.status(500).send('Erro ao consultar clientes');
+            return;
+        }
+        res.render('index', {clientes: clientes_qs});
+    })
 }
 );
 
