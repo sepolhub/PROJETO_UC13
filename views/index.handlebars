@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World, com hendlebars!</h1>
 
-{{#if clientes.lenght}}
-    {{#each clientes}}
-    <div>
-        <h2>{{this.clientes}}</h2>
-        <p>nome: R$ {{this.nome}}</p>
-        <p>email: {{this.email}}</p>
-        <p>senha: {{this.senha}}</p>
-        <p>endereco: {{this.endereco}}</p>
-    </div>
-    {{/each}}
-{{else}}
-    <p>Sem produtos disponíveis no momento.</p>
-{{/if}}
-</body>
-</html>
+    <header>
+        <nav>
+            <ul class="menu-principal">
+                <img src="/static/img/mao_e_ferramenta.png" alt="Logo" width="40" class="logo">
+                <li><a href="pi_login.html" class=""><b>Login</b></a></li>
+                <li><a href="pi_cadastro.html" class=""><b>Cadastro</b></a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section class="secao-principal">
+        <h1>Meu Carro Quebrou! E Agora?</h1>
+        <h2>Encontre a Mecânica Ideal perto de Você!</h2>
+        <p>Serviços rápidos, avaliações reais e suporte 24h.</p>
+    </section>
+
+    <footer class="rodape">
+        <ul class="menu-rodape">
+            <li><a href="teste site-PI.html" class="link-rodape">Serviços</a></li>
+            <li><a href="#" class="link-rodape">Guincho</a></li>
+            <li><a href="#" class="link-rodape">Dicas</a></li>
+            <li><a href="#" class="link-rodape">Contato</a></li>
+        </ul>
+    </footer>

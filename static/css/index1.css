@@ -1,0 +1,112 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #f0f0f0;
+}
+
+body::before { 
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/static/img/carro-quebrado.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(2px);
+    z-index: -1; 
+    transform: translateZ(0);
+}
+
+header {
+    background-color: #f0f0f0; 
+    padding: 10px; 
+}
+
+
+.menu-principal {
+    list-style: none; 
+    padding: 0px; 
+    padding-left: 30px;
+    margin: 0; 
+    display: flex; 
+    align-items: center; 
+    background-color: #464bd5;
+    border-radius: 5px;
+}
+
+.menu-principal li {
+    margin-left: 20px; 
+    color: white;
+}
+
+.menu-principal a {
+    text-decoration: none; 
+    color: #333; 
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+
+.secao-principal {
+    flex: 1;
+    padding: 20px; 
+    text-align: center;
+    align-items: center; 
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.secao-principal h1 {
+    font-size: 2em; 
+    margin-bottom: 20px; 
+    
+}
+
+.secao-principal h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+
+.rodape {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.menu-rodape {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 50px; 
+}
+
+.link-rodape {
+    text-decoration: none; 
+    color: #fff; 
+}
+
+.rodape a:hover{
+    
+    padding: 10px 20px; 
+    background-color: #00ffea;
+    border: none; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    
+}
