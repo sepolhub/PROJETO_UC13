@@ -1,0 +1,61 @@
+.cabecalho{
+  background-color: gray;
+  }
+.image_logo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 60px;
+}
+.titulo1{
+  font-size: 35px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+ 
+main{
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(38, 148, 148, 0.63);
+ }
+ 
+ 
+.selection{
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 15% 15%;
+  border: 30px;
+}
+ 
+.map{
+  display: flex;
+  align-self: center;
+  padding: 15% 5%;
+}
+ 
+ 
+footer{
+ 
+  background-color: gray;
+  font-size: 20px;
+ 
+ 
+ 
+}
+.rodape{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 30px 20px;
+ 
+}
+a:link{
+  text-decoration: none;
+  color: rgb(18, 19, 19);
+}
+a:hover{
+  text-decoration: underline;
+  color: aqua;
+}

@@ -40,18 +40,11 @@ app.get('/', (req,res)=>{;
 }
 );
 
-app.get('/clientes', (req,res)=>{;
-    let sql = 'select * from clientes';
-    conexao.query(sql, function (erro, clientes_qs) {
-        if (erro) {
-            console.error('Erro ao consultar clientes:', erro);
-            res.status(500).send('Erro ao consultar clientes');
-            return;
-        }
-        res.render('index', {clientes: clientes_qs});
-    })
-}
-);
+app.get('/servicos', (req, res) => {
+    res.render('servicos', { // Renderiza views/servicos.hbs
+        tituloPagina: "Nossos Serviços"
+    });
+});
 
 app.listen(8080);
 
